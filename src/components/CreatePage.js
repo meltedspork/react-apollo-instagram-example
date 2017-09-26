@@ -3,13 +3,13 @@ import { withRouter } from 'react-router'
 
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-​
+
 class CreatePage extends Component {
   state = {
     description: '',
     imageUrl: '',
   }
-​
+
   render () {
     return (
       <div className='w-100 pa4 flex justify-center'>
@@ -36,7 +36,7 @@ class CreatePage extends Component {
       </div>
     )
   }
-​
+
   handlePost = () => {
     const {description, imageUrl} = this.state
     this.props.addPost({ description, imageUrl })
@@ -55,7 +55,7 @@ mutation addPost($description: String!, $imageUrl: String!) {
   }
 }
 `
-​
+
 export default graphql(addMutation, {
   props: ({ ownProps, mutate }) => ({
     addPost: ({ description, imageUrl }) =>

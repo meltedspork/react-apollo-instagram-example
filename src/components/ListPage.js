@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
-
+import { Link } from 'react-router-dom'
 
 import Post from '../components/Post'
 import { graphql } from 'react-apollo'
